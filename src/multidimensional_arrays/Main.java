@@ -1,6 +1,7 @@
 package multidimensional_arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -14,13 +15,14 @@ public class Main {
 
         int last = matrix[2][3];
 
+
         List<List<Integer>> matriz = new ArrayList<>();
 
-        List<Integer> one = List.of(1, 2, 3, 4);
+        List<Integer> one = List.of(12, 11, 10, 9);
 
-        List<Integer> two = List.of(5, 6, 7, 8);
+        List<Integer> two = List.of(8, 7, 6, 5);
 
-        List<Integer> tree = List.of(9, 10, 11, 12);
+        List<Integer> tree = List.of(4, 3, 2, 1);
 
         matriz.add(one);
         matriz.add(two);
@@ -47,7 +49,7 @@ public class Main {
         // Using the stream and flatMap to navigate into the multidimensional array
 
         System.out.println("Using the stream and flatMap to navigate into the multidimensional array");
-        matriz.stream().flatMap(Collection::stream).forEach(System.out::print);
+        matriz.stream().flatMap(Collection::stream).sorted().forEach(System.out::print);
 
     }
 }
